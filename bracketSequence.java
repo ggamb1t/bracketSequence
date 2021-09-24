@@ -4,7 +4,7 @@ import java.util.*;
 
 public class bracketSequence
 {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args){
          runTests(); 
 
         boolean stringIsValid; 
