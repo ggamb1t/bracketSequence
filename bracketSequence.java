@@ -5,10 +5,9 @@ import java.util.*;
 public class bracketSequence
 {
     public static void main(String[] args) throws IOException {
-         runTests(); // Прогнать тестовые строки через алгоритм
-        // Для прогона тестовых строк раскомментируйте строку выше
+         runTests(); 
 
-        boolean stringIsValid; // true - если строка правильная, иначе - false
+        boolean stringIsValid; 
         stringIsValid = bracketsCheck(getNewStringFromKeyboard());
         printResult(stringIsValid);
     }
@@ -24,15 +23,15 @@ public class bracketSequence
     }
 
     private static boolean bracketsCheck(String str) {
-        Stack<Character> stack_brackets = new Stack<Character>(); // Создание стэка типа Character
+        Stack<Character> stack_brackets = new Stack<Character>(); 
         try {
             for (int i = 0; i < str.length(); i++) {
 
                 Character currentChar = str.charAt(i);
 
-                switch (currentChar) { // Посимвольная проверка строки
-                    case '(': // Встретились открывающие скобки
-                        stack_brackets.push(currentChar); // Если встречается открытая скобка - добавляем её в стэк
+                switch (currentChar) { 
+                    case '(': 
+                        stack_brackets.push(currentChar); 
                         break;
                     case '{':
                         stack_brackets.push(currentChar);
@@ -59,7 +58,7 @@ public class bracketSequence
                 }
             }
         }
-        catch (EmptyStackException exc) {  // Исключение возникало при попытке вынуть элемент из пустого стэка
+        catch (EmptyStackException exc) {  
             return false;
         }
         return stack_brackets.empty();
