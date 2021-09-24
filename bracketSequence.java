@@ -15,7 +15,9 @@ public class bracketSequence
     public static String getNewStringFromKeyboard() {
         Scanner in = new Scanner(System.in);
         System.out.print("\n   Enter your string:");
-        return in.next();
+        String result = in.nextLine();
+        in.close();
+        return result;
     }
 
     private static void printResult(boolean goodOrBad) {
